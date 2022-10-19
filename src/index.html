@@ -1,0 +1,517 @@
+@@include("partials/main.html")
+
+    <head>
+
+        @@include("partials/title-meta.html", {"title": "Dashboard"})
+
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        @@include("partials/page-title.html", {"pagetitle": "Mthembe Group", "title": "Dashboard"})
+
+                        <div class="row">
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="float-end mt-2">
+                                            <div id="total-revenue-chart"></div>
+                                        </div>
+                                        <div>
+                                            <h4 class="mb-1 mt-1">R<span data-plugin="counterup">34,152</span></h4>
+                                            <p class="text-muted mb-0">Premium Collected</p>
+                                        </div>
+                                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><i class="mdi mdi-arrow-up-bold me-1"></i>2.65%</span> since last week
+                                        </p>
+                                    </div>
+                                </div>
+                            </div> <!-- end col-->
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="float-end mt-2">
+                                            <div id="orders-chart"> </div>
+                                        </div>
+                                        <div>
+                                            <h4 class="mb-1 mt-1"><span data-plugin="counterup">5,643</span></h4>
+                                            <p class="text-muted mb-0">Policy Captured</p>
+                                        </div>
+                                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><i class="mdi mdi-arrow-up-bold me-1"></i>0.82%</span> since last week
+                                        </p>
+                                    </div>
+                                </div>
+                            </div> <!-- end col-->
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="float-end mt-2">
+                                            <div id="customers-chart"> </div>
+                                        </div>
+                                        <div>
+                                            <h4 class="mb-1 mt-1"><span data-plugin="counterup">100</span></h4>
+                                            <p class="text-muted mb-0">Lapsed Policies</p>
+                                        </div>
+                                        <p class="text-muted mt-3 mb-0"><span class="text-danger me-1"><i class="mdi mdi-arrow-down-bold me-1"></i>6.24%</span> since last week
+                                        </p>
+                                    </div>
+                                </div>
+                            </div> <!-- end col-->
+
+                            <div class="col-md-6 col-xl-3">
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="float-end mt-2">
+                                            <div id="growth-chart"></div>
+                                        </div>
+                                        <div>
+                                            <h4 class="mb-1 mt-1">+ <span data-plugin="counterup">12.58</span>%</h4>
+                                            <p class="text-muted mb-0">Portfolio Growth</p>
+                                        </div>
+                                        <p class="text-muted mt-3 mb-0"><span class="text-success me-1"><i class="mdi mdi-arrow-up-bold me-1"></i>10.51%</span> since last week
+                                        </p>
+                                    </div>
+                                </div>
+                            </div> <!-- end col-->
+                        </div> <!-- end row-->
+
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="float-end">
+                                            <div class="dropdown">
+                                                <a class="dropdown-toggle text-reset" href="#" id="dropdownMenuButton5"
+                                                    data-bs-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    <span class="fw-semibold">Sort By:</span> <span class="text-muted">Yearly<i class="mdi mdi-chevron-down ms-1"></i></span>
+                                                </a>
+
+                                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton5">
+                                                    <a class="dropdown-item" href="#">Monthly</a>
+                                                    <a class="dropdown-item" href="#">Yearly</a>
+                                                    <a class="dropdown-item" href="#">Weekly</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4 class="card-title mb-4">Sales Analytics</h4>
+
+                                        <div class="mt-1">
+                                            <ul class="list-inline main-chart mb-0">
+                                                <li class="list-inline-item chart-border-left me-0 border-0">
+                                                    <h3 class="text-primary">R<span data-plugin="counterup">2,300,371</span><span class="text-muted d-inline-block font-size-15 ms-3">Premium collection</span></h3>
+                                                </li>
+                                                <li class="list-inline-item chart-border-left me-0">
+                                                    <h3><span data-plugin="counterup">50,000</span><span class="text-muted d-inline-block font-size-15 ms-3">Policies</span>
+                                                    </h3>
+                                                </li>
+                                                <li class="list-inline-item chart-border-left me-0">
+                                                    <h3><span data-plugin="counterup">3.6</span>%<span class="text-muted d-inline-block font-size-15 ms-3">Conversation Ratio</span></h3>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="mt-3">
+                                            <div id="sales-analytics-chart" class="apex-charts" dir="ltr"></div>
+                                        </div>
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+                            </div> <!-- end col-->
+
+                            <div class="col-xl-4">
+                                <div class="card bg-primary">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-8">
+                                                <p class="text-white font-size-18">Add a new Sales Representative <i class="mdi mdi-arrow-right"></i></p>
+                                                <div class="mt-4">
+                                                    <a href="javascript: void(0);" class="btn btn-success waves-effect waves-light">Create Account</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="mt-4 mt-sm-0">
+                                                    <img src="assets/images/setup-analytics-amico.svg" class="img-fluid" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="float-end">
+                                            <div class="dropdown">
+                                                <a class="dropdown-toggle text-reset" href="#" id="dropdownMenuButton1"
+                                                    data-bs-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    <span class="fw-semibold">Sort By:</span> <span class="text-muted">Yearly<i class="mdi mdi-chevron-down ms-1"></i></span>
+                                                </a>
+
+                                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                                                    <a class="dropdown-item" href="#">Monthly</a>
+                                                    <a class="dropdown-item" href="#">Yearly</a>
+                                                    <a class="dropdown-item" href="#">Weekly</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h4 class="card-title mb-4">Top Selling Policies</h4>
+
+
+                                        <div class="row align-items-center g-0 mt-3">
+                                            <div class="col-sm-3">
+                                                <p class="text-truncate mt-1 mb-0"><i class="mdi mdi-circle-medium text-primary me-2"></i> Member only Plan </p>
+                                            </div>
+
+                                            <div class="col-sm-9">
+                                                <div class="progress mt-1" style="height: 6px;">
+                                                    <div class="progress-bar progress-bar bg-primary" role="progressbar"
+                                                        style="width: 82%" aria-valuenow="82" aria-valuemin="0"
+                                                        aria-valuemax="82">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end row-->
+
+                                        <div class="row align-items-center g-0 mt-3">
+                                            <div class="col-sm-3">
+                                                <p class="text-truncate mt-1 mb-0"><i class="mdi mdi-circle-medium text-info me-2"></i> Member +6 Plan </p>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="progress mt-1" style="height: 6px;">
+                                                    <div class="progress-bar progress-bar bg-info" role="progressbar"
+                                                        style="width: 58%" aria-valuenow="58" aria-valuemin="0"
+                                                        aria-valuemax="58">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end row-->
+
+                                        <div class="row align-items-center g-0 mt-3">
+                                            <div class="col-sm-3">
+                                                <p class="text-truncate mt-1 mb-0"><i class="mdi mdi-circle-medium text-success me-2"></i> Member, spouse +6 Plan </p>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="progress mt-1" style="height: 6px;">
+                                                    <div class="progress-bar progress-bar bg-success" role="progressbar"
+                                                        style="width: 48%" aria-valuenow="48" aria-valuemin="0"
+                                                        aria-valuemax="48">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end row-->
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+                            </div> <!-- end Col -->
+                        </div> <!-- end row-->
+
+
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Latest Transaction</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-centered table-nowrap mb-0">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th style="width: 20px;">
+                                                            <div class="form-check font-size-16">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck1">
+                                                                <label class="form-check-label" for="customCheck1">&nbsp;</label>
+                                                            </div>
+                                                        </th>
+                                                        <th>Policy Number</th>
+                                                        <th>Surname</th>
+                                                        <th>First Name</th>
+                                                        <th> Inception Date</th>
+                                                        <th> Cover Date</th>
+                                                        <th>Type</th>
+                                                        <th>Cover Amount</th>
+                                                        <th>Policy Status</th>
+                                                        <th>Premium Amount</th>
+                                                        <th>Payment Method</th>
+                                                        <th>View Details</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="form-check font-size-16">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body fw-bold">MG00001</a> </td>
+                                                        <td>Tembe</td>
+                                                        <td>Gladys</td>
+                                                        <td>
+                                                            10/1/2021
+                                                        </td>
+                                                        <td>
+                                                            4/1/2022
+                                                        </td>
+                                                        <td>
+                                                            Main member
+                                                        </td>
+                                                        <td>
+                                                            R 30000.00
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge rounded-pill bg-soft-success font-size-12">Active</span>
+                                                        </td>
+                                                        <td>
+                                                            R 190.00
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-mastercard me-1"></i> Easypay
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="form-check font-size-16">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck3">
+                                                                <label class="form-check-label" for="customCheck3">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body fw-bold">MG00002</a> </td>
+                                                        <td>Mpshe</td>
+                                                        <td>Lethlohonlo</td>
+                                                        <td>
+                                                            10/1/2021
+                                                        </td>
+                                                        <td>
+                                                            4/1/2022
+                                                        </td>
+                                                        <td>
+                                                            Main member
+                                                        </td>
+                                                        <td>
+                                                            R 30000.00
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge rounded-pill bg-soft-warning font-size-12">On Trial</span>
+                                                        </td>
+                                                        <td>
+                                                            R 190.00
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-mastercard me-1"></i> Easypay
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <div class="form-check font-size-16">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck4">
+                                                                <label class="form-check-label" for="customCheck4">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body fw-bold">MG00003</a> </td>
+                                                        <td>Mlangeni</td>
+                                                        <td>Ntombifuthi Annah</td>
+                                                        <td>
+                                                            12/1/2021
+                                                        </td>
+                                                        <td>
+                                                            6/1/2022
+                                                        </td>
+                                                        <td>
+                                                            Main member
+                                                        </td>
+                                                        <td>
+                                                            R 30000.00
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge rounded-pill bg-soft-warning font-size-12">On Trial</span>
+                                                        </td>
+                                                        <td>
+                                                            R 500.00
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-mastercard me-1"></i> Easypay
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="form-check font-size-16">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck5">
+                                                                <label class="form-check-label" for="customCheck5">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body fw-bold">MG00005</a> </td>
+                                                        <td>Msibi</td>
+                                                        <td>Gloria Sanna</td>
+                                                        <td>
+                                                            11/1/2021
+                                                        </td>
+                                                        <td>
+                                                            5/1/2022
+                                                        </td>
+                                                        <td>
+                                                            Main member
+                                                        </td>
+                                                        <td>
+                                                            R 20000.00
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge rounded-pill bg-soft-warning font-size-12">On Trial</span>
+                                                        </td>
+                                                        <td>
+                                                            R 160.00
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-mastercard me-1"></i> Easypay
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="form-check font-size-16">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck6">
+                                                                <label class="form-check-label" for="customCheck6">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body fw-bold">MG00007</a> </td>
+                                                        <td>Tembe</td>
+                                                        <td>Lungile Victoria</td>
+                                                        <td>
+                                                            11/1/2021
+                                                        </td>
+                                                        <td>
+                                                            5/1/2022
+                                                        </td>
+                                                        <td>
+                                                            Main member
+                                                        </td>
+                                                        <td>
+                                                            R 30000.00
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge rounded-pill bg-soft-warning font-size-12">On Trial</span>
+                                                        </td>
+                                                        <td>
+                                                            R 500.00
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-mastercard me-1"></i> Easypay
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="form-check font-size-16">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck7">
+                                                                <label class="form-check-label" for="customCheck7">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td><a href="javascript: void(0);" class="text-body fw-bold">MG00008</a> </td>
+                                                        <td>Tembe</td>
+                                                        <td>Bulelani</td>
+                                                        <td>
+                                                            11/1/2021
+                                                        </td>
+                                                        <td>
+                                                            5/1/2022
+                                                        </td>
+                                                        <td>
+                                                            Main member
+                                                        </td>
+                                                        <td>
+                                                            R 30000.00
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge rounded-pill bg-soft-success font-size-12">Active</span>
+                                                        </td>
+                                                        <td>
+                                                            R 500.00
+                                                        </td>
+                                                        <td>
+                                                            <i class="fab fa-cc-mastercard me-1"></i> Easypay
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light">
+                                                                View Details
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- end table-responsive -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+
+                @@include("partials/footer.html")
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+
+        <!-- apexcharts -->
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+        <script src="assets/js/pages/dashboard.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+
+</html>

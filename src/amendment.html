@@ -1,0 +1,120 @@
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Amendment"})
+
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        @@include("partials/page-title.html", {"pagetitle": "Mthembe Group", "title": "New Amendment"})
+
+                        
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-5">
+                                                <div class="mt-4">
+                                                    <form>
+                                                        <label for="exampleDataList" class="col-md-2 col-form-label">Policies</label>
+                                                        <div class="mb-3">
+                                                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                                                            <datalist id="datalistOptions">
+                                                                <option value="MG0001">
+                                                                <option value="MG0002">
+                                                                <option value="MG0003">
+                                                                <option value="MG0004">
+                                                                <option value="MG0005">
+                                                                <option value="MG0006">
+                                                                <option value="MG0007">
+                                                                <option value="MG0008">
+                                                                
+                                                            </datalist>
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                            <label for="basicpill-lastname-input">Type of Amendment:</label>
+                                                            <div class="col-md">
+                                                                <select class="form-select">
+                                                                    <option></option>
+                                                                    <option>Main member details</option>
+                                                                    <option>Banking details</option>
+                                                                    <option>Adding cover members</option>
+                                                                    <option>Adding extended members</option>
+                                                                    <option>Changing cover amount</option>
+                                                                    <option>Changing beneficiaries</option>
+                                                                    <option></option>
+                                                                    
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="formrow-Fullname-input">Ref No:</label>
+                                                            <input type="text" class="form-control" id="formrow-Fullname-input">
+                                                        </div>
+            
+                                                        <div class="row">                                                            
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Comment</label>
+                                                                <div>
+                                                                    <textarea required class="form-control" rows="5"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        
+                                                        <div class="d-flex flex-wrap gap-3 mt-3">
+                                                            <button type="submit" class="btn btn-primary waves-effect waves-light w-md">Submit</button>
+                                                            
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Form Layout -->
+                        
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                @@include("partials/footer.html")
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>
